@@ -1,5 +1,5 @@
 let operationsHistory = []; // Массив для хранения истории операций
-let balance = 1000; // Начальный баланс
+let balance = 100000; // Начальный баланс
 let currentFormId = null;
 
 function showMobilePayment() {
