@@ -1,0 +1,124 @@
+/* Общие стили */
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    color: #333;
+ }
+ 
+ .container {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+ }
+ 
+ /* Заголовок */
+ .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 25px;
+    background-color: #4834d4;
+    color: #fff;
+    border-radius: 16px 16px 0 0;
+ }
+ 
+ .header img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+ }
+ 
+ .balance {
+    font-size: 22px;
+    font-weight: 600;
+ }
+ 
+ /* Секции */
+ .transfer-section,
+ .pay-section {
+    margin-top: 40px;
+    padding: 30px;
+    background-color: #f2f2f2;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+ }
+ 
+ h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #4834d4;
+ }
+ 
+ /* Формы */
+ input[type="text"],
+ select {
+    width: 100%;
+    padding: 14px 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 18px;
+    transition: border-color 0.3s ease;
+ }
+ 
+ input[type="text"]:focus,
+ select:focus {
+    outline: none;
+    border-color: #4834d4;
+ }
+ 
+ /* Списки */
+ ul {
+    list-style-type: none;
+    padding: 0;
+ }
+ 
+ li {
+    cursor: pointer;
+    padding: 14px 20px;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+ }
+ 
+ li:hover {
+    background-color: #f7f7f7;
+ }
+ 
+ /* Кнопки */
+ button {
+    padding: 14px 30px;
+    background-color: #4834d4;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+ }
+ 
+ button:hover {
+    background-color: #6a5aeb;
+ }
+ 
+ /* История операций */
+ #historySection {
+    margin-top: 40px;
+    padding: 30px;
+    background-color: #f2f2f2;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+ }
+ 
+ #operationHistory li {
+    padding: 14px 20px;
+    border-bottom: 1px solid #ddd;
+    font-size: 18px;
+ }

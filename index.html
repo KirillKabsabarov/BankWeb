@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Банковские платежи</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="avatar.jpg" alt="Avatar">
+            <div class="balance">Баланс: 1000 руб.</div>
+            <button onclick="showHistory()">История</button>
+        </div>
+        <div class="transfer-section">
+            <h2>Перевести</h2>
+            <input type="text" placeholder="Номер телефона">
+            <input type="text" placeholder="Сумма">
+            <button onclick="transfer()">Перевод</button>
+        </div>
+        <div class="pay-section">
+            <h2>Оплатить</h2>
+            <ul>
+                <li onclick="showMobilePayment()">Мобильная связь</li>
+                <li onclick="showHousePayment()">Дом</li>
+                <li onclick="showEducationPayment()">Образование</li>
+                <li onclick="showTransportMenu()">Транспорт</li>
+                <li onclick="showInvoicePayment()">Оплата по реквизитам</li>
+            </ul>
+        </div>
+
+        <div id="mobilePaymentForm" style="display: none;">
+            <h2>Мобильная связь</h2>
+            <input type="text" id="phoneNumber" placeholder="Номер телефона">
+            <select id="operator">
+                <option value="MTS">МТС</option>
+                <option value="Megafon">МегаФон</option>
+                <option value="Beeline">Билайн</option>
+            </select>
+            <input type="text" id="amount" placeholder="Сумма">
+            <button onclick="makeMobilePayment()">Перевод</button>
+            <button onclick="hideMobilePayment()">Назад</button>
+        </div>
+
+        <div id="housePaymentForm" style="display: none;">
+            <h2>Оплата коммунальных услуг</h2>
+            <input type="text" id="accountNumber" placeholder="Лицевой счет (10 цифр)">
+            <select id="utilityType">
+                <option value="electricity">Электроэнергия</option>
+                <option value="gas">Газ</option>
+                <option value="water">Водоснабжение</option>
+                <option value="heat">Теплоснабжение</option>
+            </select>
+            <input type="text" id="houseAmount" placeholder="Сумма">
+            <button onclick="makeHousePayment()">Перевод</button>
+            <button onclick="hideHousePayment()">Назад</button>
+        </div>
+
+        <div id="educationPaymentForm" style="display: none;">
+            <h2>Оплата образования</h2>
+            <select id="educationInstitution">
+                <option value="UUNIT">УУНИТ</option>
+                <option value="UGNTU">УГНТУ</option>
+                <option value="BashSU">БашГУ</option>
+            </select>
+            <input type="text" id="fullName" placeholder="ФИО">
+            <input type="text" id="courseCode" placeholder="Код направления">
+            <input type="text" id="group" placeholder="Группа">
+            <input type="text" id="educationAmount" placeholder="Сумма">
+            <button onclick="makeEducationPayment()">Перевод</button>
+            <button onclick="hideEducationPayment()">Назад</button>
+        </div>
+
+        <div id="transportMenu" style="display: none;">
+            <h2>Транспорт</h2>
+            <button onclick="showTrafficFines()">Штрафы ГИБДД</button>
+            <button onclick="showParkingPayment()">Парковка</button>
+            <button onclick="hideTransportMenu()">Назад</button>
+        </div>
+
+        <div id="trafficFinesForm" style="display: none;">
+            <h2>Штрафы ГИБДД</h2>
+            <input type="text" id="trafficFineNumber" placeholder="Номер документа (УИН)">
+            <button onclick="payTrafficFine()">Оплатить</button>
+            <button onclick="hideTrafficFines()">Назад</button>
+            
+        </div>
+
+        <div id="parkingPaymentForm" style="display: none;">
+            <h2>Оплата парковки</h2>
+            <input type="text" id="parkingTicketNumber" placeholder="Номер парковочного счета">
+            <input type="text" id="parkingAmount" placeholder="Сумма">
+            <button onclick="payParking()">Оплатить</button>
+            <button onclick="hideParkingPayment()">Назад</button>
+        </div>
+
+        <div id="invoicePaymentForm" style="display: none;">
+          <h2>Оплата по реквизитам</h2>
+          <input type="text" id="recipientInfo" placeholder="ИНН или счет получателя">
+          <input type="text" id="invoiceAmount" placeholder="Сумма">
+          <button onclick="makeInvoicePayment()">Перевод</button>
+          <button onclick="hideInvoicePayment()">Назад</button>
+      </div>
+      
+      <div id="historySection" style="display: none;">
+        <h2>История операций</h2>
+        <ul id="operationHistory"></ul>
+        <button onclick="hideHistory()">Закрыть</button>
+    </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
